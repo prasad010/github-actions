@@ -13,6 +13,5 @@ jobs:
     - name: echo event name
       run: | 
        echo "The event name is ${{ github.event_name }}" 
-        echo "The event action is ${{ github.event.action }}"
-        echo "The PR number is ${{ github.event.number }}"
-        
+       echo "The event action is ${{ github.event.action }}"
+       echo "The PR number is ${{ github.event.number }}"
