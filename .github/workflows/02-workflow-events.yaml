@@ -1,0 +1,17 @@
+name: Workflow Events
+on: 
+# push:
+#  branches:
+#   - main
+ pull_request:
+  branches:
+   - main
+jobs: 
+ workflow_events:
+  runs-on: ubuntu_latest
+   steps: 
+    - name: echo event name
+      run: echo "The event name is ${{ github.action.event_name }}"
+    
+         
+   
