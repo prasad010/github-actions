@@ -1,0 +1,30 @@
+name: "03 - Workflow Runners"
+on:
+  push:
+    branches:
+      - main
+jobs:
+  workflow_runners_linux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo runner name
+        run: |
+          echo "The runner name is ${{ runner.name }}"
+          echo "The runner OS is ${{ runner.os }}"
+          echo "The runner architecture is ${{ runner.arch }}"
+  workflow_runners_windows:
+    runs-on: windows-latest
+    steps:
+      - name: echo runner name
+        run: |
+          echo "The runner name is ${{ runner.name }}"
+          echo "The runner OS is ${{ runner.os }}"
+          echo "The runner architecture is ${{ runner.arch }}"
+  workflow_runner_mac:
+    runs-on: mac-latest
+    steps:
+        - name: echo runner name
+          run: |
+           echo "The runner name is ${{ runner.name }}"
+           echo "The runner OS is ${{ runner.os }}"
+           echo "The runner architecture is ${{ runner.arch }}"
