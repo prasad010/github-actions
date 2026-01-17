@@ -1,11 +1,8 @@
 name: Workflow Events
 on: 
- push:
-  branches:
-   - main
- pull_request:
-  branches:
-   - main
+  pull_request:
+   branches:
+    - main
 jobs: 
  workflow_events:
   runs-on: ubuntu-latest
@@ -15,3 +12,4 @@ jobs:
        echo "The event name is ${{ github.event_name }}" 
        echo "The event action is ${{ github.event.action }}"
        echo "The PR number is ${{ github.event.number }}"
+       echo "The commit message is ${{ github.event.head_commit.message }}"
