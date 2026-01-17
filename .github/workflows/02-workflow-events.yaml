@@ -12,4 +12,4 @@ jobs:
        echo "The event name is ${{ github.event_name }}" 
        echo "The event action is ${{ github.event.action }}"
        echo "The PR number is ${{ github.event.number }}"
-       echo "The commit message is ${{ github.event.head_commit.message }}"
+       echo "The commit SHA is ${{ github.event.pull_request.head.sha }}"
