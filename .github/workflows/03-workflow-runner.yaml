@@ -21,7 +21,7 @@ jobs:
           echo "The runner OS is ${{ runner.os }}"
           echo "The runner architecture is ${{ runner.arch }}"
   workflow_runner_mac:
-    runs-on: mac-latest
+    runs-on: macos-latest
     steps:
         - name: echo runner name
           run: |
