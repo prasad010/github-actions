@@ -9,3 +9,5 @@ git add ./.github/workflows/*
 git commit -m "$1"
 echo -e ${GREEN} $(git branch)
 echo -e ${RED} $(git push -u github_actions main)
+
+echo -e ${NC} "push completed"
